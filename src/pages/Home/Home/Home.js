@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../About/About";
 import AnimationBanner from "../AnimationBanner/AnimationBanner";
 import Contact from "../Contact/Contact";
 import Discover from "../Discover/Discover";
@@ -9,6 +10,7 @@ const Home = () => {
     <div>
       <AnimationBanner />
       <Discover />
+      <About />
       <Contact />
       <SignUpSection />
     </div>
