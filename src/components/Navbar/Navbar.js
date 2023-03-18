@@ -4,14 +4,14 @@ import { Link as LinkS } from "react-scroll";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <div className="nav">
       <div className="navbar-container">
         <Link to="/" className="nav-logo">
           somewhereinblog.com
         </Link>
-        <div className="mobile-icon">
+        <div onClick={toggle} className="mobile-icon">
           <AiOutlineBars />
         </div>
         <ul className="nav-menu">
@@ -30,7 +30,17 @@ const Navbar = () => {
               Contact
             </LinkS>
           </div>
+          <div className="nav-item">
+            <LinkS className="nav-links" to="/">
+              Sign Up
+            </LinkS>
+          </div>
         </ul>
+        <div className="nav-btn">
+          <Link className="nav-btn-link" to="/">
+            Sign In
+          </Link>
+        </div>
       </div>
     </div>
   );

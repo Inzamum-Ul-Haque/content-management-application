@@ -62,8 +62,39 @@
   cursor: pointer;
 }
 
+.nav-links:hover {
+  color: #01bf71;
+  border-bottom: 3px solid #01bf71;
+  transition: 0.8s all ease;
+}
+
 .nav-links.active {
   border-bottom: 3px solid #01bf71;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn-link {
+  background: #01bf71;
+  border-radius: 50px;
+  color: #010606;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.nav-btn-link:hover {
+  background: #fff;
+  color: #010606;
 }
 
 @media screen and (max-width: 960px) {
@@ -82,10 +113,12 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
-}
 
-@media screen and (max-width: 768px) {
   .nav-menu {
+    display: none;
+  }
+
+  .nav-btn {
     display: none;
   }
 }
