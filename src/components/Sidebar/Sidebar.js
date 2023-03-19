@@ -15,16 +15,16 @@ const Sidebar = ({ isOpen, toggle }) => {
       </div>
       <div className="sidebar-wrapper">
         <div className="sidebar-menu">
-          <LinkS to="/" className="sidebar-link">
+          <LinkS onClick={toggle} to="/" className="sidebar-link">
             Discover
           </LinkS>
-          <LinkS to="/" className="sidebar-link">
+          <LinkS onClick={toggle} to="/" className="sidebar-link">
             About
           </LinkS>
-          <LinkS to="/" className="sidebar-link">
+          <LinkS onClick={toggle} to="/" className="sidebar-link">
             Contact
           </LinkS>
-          <LinkS to="/" className="sidebar-link">
+          <LinkS onClick={toggle} to="/" className="sidebar-link">
             Sign Up
           </LinkS>
         </div>
