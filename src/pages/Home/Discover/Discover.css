@@ -76,6 +76,9 @@
   .discover-text-content h1 {
     font-size: 32px;
   }
+  .discover-text-content p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -85,5 +88,8 @@
   }
   .discover-text-content h1 {
     font-size: 20px;
+  }
+  .discover-text-content p {
+    font-size: 18px;
   }
 }

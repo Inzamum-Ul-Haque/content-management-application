@@ -36,9 +36,9 @@ const Navbar = ({ toggle }) => {
               exact="true"
               offset={-80}
               className="nav-links"
-              to="about"
+              to="latest"
             >
-              About
+              Latest
             </LinkS>
           </div>
           <div className="nav-item">
