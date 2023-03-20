@@ -1,0 +1,89 @@
+.discover-container {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  background: #010606;
+}
+
+.discover-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+  align-items: center;
+}
+
+.discover-text-content {
+  color: #fff;
+  text-align: left;
+}
+
+.discover-text-content h1 {
+  font-size: 48px;
+  max-width: 600px;
+}
+
+.discover-text-content p {
+  font-size: 24px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.discover-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.discover-img img {
+  width: 100%;
+}
+
+.discover-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.discover-btn-link {
+  background: #01bf71;
+  border-radius: 50px;
+  color: #010606;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.discover-btn-link:hover {
+  background: #fff;
+  color: #010606;
+}
+
+@media screen and (max-width: 768px) {
+  .discover-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+  .discover-text-content h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .discover-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+  .discover-text-content h1 {
+    font-size: 20px;
+  }
+}

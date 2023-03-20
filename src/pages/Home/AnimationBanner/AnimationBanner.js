@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AnimationBanner.css";
 import Video from "../../../assets/videos/video.mp4";
-import { Link } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
 import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
 
 const AnimationBanner = () => {
@@ -12,7 +12,7 @@ const AnimationBanner = () => {
   };
 
   return (
-    <div className="hero-container">
+    <div id="home" className="hero-container">
       <div className="hero-bg">
         <video
           className="video-bg"
@@ -30,15 +30,20 @@ const AnimationBanner = () => {
           share them.{" "}
         </p>
         <div className="hero-btn-wrapper">
-          <Link
+          <LinkS
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
             className="hero-btn-link"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            to="/"
+            to="sign-up"
           >
             <span>Get Started</span>{" "}
             {hover ? <MdKeyboardArrowRight /> : <MdArrowForward />}
-          </Link>
+          </LinkS>
         </div>
       </div>
     </div>

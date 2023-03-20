@@ -16,22 +16,54 @@ const Navbar = ({ toggle }) => {
         </div>
         <ul className="nav-menu">
           <div className="nav-item">
-            <LinkS className="nav-links" to="/">
+            <LinkS
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              className="nav-links"
+              to="discover"
+            >
               Discover
             </LinkS>
           </div>
           <div className="nav-item">
-            <LinkS className="nav-links" to="/">
+            <LinkS
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              className="nav-links"
+              to="about"
+            >
               About
             </LinkS>
           </div>
           <div className="nav-item">
-            <LinkS className="nav-links" to="/">
+            <LinkS
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              className="nav-links"
+              to="contact"
+            >
               Contact
             </LinkS>
           </div>
           <div className="nav-item">
-            <LinkS className="nav-links" to="/">
+            <LinkS
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              className="nav-links"
+              to="sign-up"
+            >
               Sign Up
             </LinkS>
           </div>
