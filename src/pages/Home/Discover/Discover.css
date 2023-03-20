@@ -68,6 +68,20 @@
   color: #010606;
 }
 
+@media screen and (max-width: 1040px) {
+  .discover-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+  .discover-text-content {
+    text-align: center;
+  }
+  .discover-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .discover-wrapper {
     grid-template-columns: repeat(1, 1fr);
