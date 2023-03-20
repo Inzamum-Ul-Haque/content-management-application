@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 
 const Navbar = ({ toggle }) => {
-  // const [scrollNav, setScrollNav] = useState(false);
+  const [scrollNav, setScrollNav] = useState(false);
 
-  // const changeNavBg = () => {
-  //   if (window.scrollY > 80) {
-  //     setScrollNav(true);
-  //   } else {
-  //     setScrollNav(false);
-  //   }
-  // };
+  const changeNavBg = () => {
+    if (window.scrollY > 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeNavBg);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavBg);
+  }, []);
 
   return (
-    <div className="nav">
+    <div className={`nav ${scrollNav ? "toggle-nav-bg" : ""}`}>
       <div className="navbar-container">
         <Link to="/" className="nav-logo">
           somewhereinblog.com
