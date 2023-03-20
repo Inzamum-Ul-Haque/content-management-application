@@ -69,7 +69,7 @@ const Navbar = ({ toggle }) => {
           </div>
         </ul>
         <div className="nav-btn">
-          <Link className="nav-btn-link" to="/">
+          <Link className="nav-btn-link" to="/sign-in">
             Sign In
           </Link>
         </div>

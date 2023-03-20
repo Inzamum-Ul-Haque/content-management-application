@@ -41,8 +41,8 @@ const Latest = () => {
           </p>
         </div>
         <div className="latest-img-container">
-          {images.map((image) => (
-            <LatestImageSection image={image} />
+          {images.map((image, idx) => (
+            <LatestImageSection key={idx} image={image} />
           ))}
         </div>
       </div>
