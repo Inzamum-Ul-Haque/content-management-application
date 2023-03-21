@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import "./Footer.css";
 import {
   FaFacebook,
@@ -10,6 +11,10 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-wrap">
@@ -49,7 +54,7 @@ const Footer = () => {
         </div>
         <section className="social-media">
           <div className="social-media-wrap">
-            <Link to="/" className="social-logo">
+            <Link onClick={toggleHome} to="/" className="social-logo">
               somewhereinblog.com
             </Link>
             <small className="website-rights">
