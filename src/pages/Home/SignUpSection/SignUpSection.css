@@ -1,0 +1,97 @@
+.signup-section-container {
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-section-wrapper {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 2s ease-in-out;
+}
+
+.card .face h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  transform: perspective(500px) translateZ(50px);
+}
+
+.card .face.front {
+  background: #ff0;
+}
+
+.card:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+  background: #3bc2ff;
+  color: #fff;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+/* right content designs */
+.right-content {
+  color: #000;
+  text-align: left;
+}
+
+.right-content h1 {
+  font-size: 48px;
+  max-width: 600px;
+}
+
+.right-content p {
+  font-size: 24px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.signup-btn-link {
+  background: #01bf71;
+  border-radius: 50px;
+  color: #010606;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}

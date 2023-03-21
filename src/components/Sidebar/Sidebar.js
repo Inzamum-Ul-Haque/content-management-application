@@ -15,11 +15,29 @@ const Sidebar = ({ isOpen, toggle }) => {
       </div>
       <div className="sidebar-wrapper">
         <div className="sidebar-menu">
-          <LinkS onClick={toggle} to="/" className="sidebar-link">
+          <LinkS
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            to="discover"
+            onClick={toggle}
+            className="sidebar-link"
+          >
             Discover
           </LinkS>
-          <LinkS onClick={toggle} to="/" className="sidebar-link">
-            About
+          <LinkS
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            to="latest"
+            onClick={toggle}
+            className="sidebar-link"
+          >
+            Latest
           </LinkS>
           <LinkS onClick={toggle} to="/" className="sidebar-link">
             Contact
@@ -29,7 +47,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </LinkS>
         </div>
         <div className="side-btn-wrap">
-          <Link to="/" className="sidebar-route">
+          <Link to="/sign-in" className="sidebar-route">
             Sign In
           </Link>
         </div>
