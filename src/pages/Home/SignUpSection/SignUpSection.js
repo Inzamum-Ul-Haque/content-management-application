@@ -1,19 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./SignUpSection.css";
+import Lottie from "react-lottie";
+import { defaultOptions } from "../../../staticData/LottieOptions";
 
 const SignUpSection = () => {
   return (
-    <div className="signup-section-container">
+    <div id="sign-up" className="signup-section-container">
       <div className="signup-section-wrapper">
         <div className="signup-section-left">
           <div className="left-content">
             <div className="card">
               <div className="face front">
-                <h1>Front</h1>
+                <Lottie options={defaultOptions[0]} width={450} height={450} />
               </div>
               <div className="face back">
-                <h1>Back</h1>
+                <Lottie options={defaultOptions[1]} width={450} height={450} />
               </div>
             </div>
           </div>

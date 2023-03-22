@@ -42,7 +42,16 @@ const Sidebar = ({ isOpen, toggle }) => {
           <LinkS onClick={toggle} to="/" className="sidebar-link">
             Contact
           </LinkS>
-          <LinkS onClick={toggle} to="/" className="sidebar-link">
+          <LinkS
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            to="sign-up"
+            onClick={toggle}
+            className="sidebar-link"
+          >
             Sign Up
           </LinkS>
         </div>

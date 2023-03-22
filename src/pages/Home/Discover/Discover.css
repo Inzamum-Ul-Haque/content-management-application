@@ -1,5 +1,5 @@
 .discover-container {
-  height: 800px;
+  min-height: 800px;
   display: flex;
   align-items: center;
   background: #010606;
@@ -10,7 +10,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 100px;
+  gap: 100px;
   align-items: center;
 }
 
@@ -69,9 +69,11 @@
 }
 
 @media screen and (max-width: 1040px) {
+  .discover-container {
+    padding: 50px 0;
+  }
   .discover-wrapper {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 50px;
   }
   .discover-text-content {
     text-align: center;
@@ -83,9 +85,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .discover-container {
+    padding: 50px 0;
+  }
   .discover-wrapper {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 50px;
   }
   .discover-text-content h1 {
     font-size: 32px;
@@ -96,9 +100,11 @@
 }
 
 @media screen and (max-width: 480px) {
+  .discover-container {
+    padding: 50px 0;
+  }
   .discover-wrapper {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 50px;
   }
   .discover-text-content h1 {
     font-size: 20px;

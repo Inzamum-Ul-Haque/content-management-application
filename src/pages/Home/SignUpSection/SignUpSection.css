@@ -8,14 +8,15 @@
 .signup-section-wrapper {
   max-width: 1400px;
   display: grid;
+  gap: 100px;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .card {
   text-align: center;
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   transform-style: preserve-3d;
   margin: 0 auto;
 }
@@ -34,14 +35,12 @@
   transition: 2s ease-in-out;
 }
 
-.card .face h1 {
-  font-size: 4em;
-  text-transform: uppercase;
+.card .face div {
   transform: perspective(500px) translateZ(50px);
 }
 
 .card .face.front {
-  background: #ff0;
+  background: #fff;
 }
 
 .card:hover .face.front {
@@ -49,8 +48,7 @@
 }
 
 .card .face.back {
-  background: #3bc2ff;
-  color: #fff;
+  background: #fff;
   transform: perspective(500px) rotateY(180deg);
 }
 
@@ -59,6 +57,12 @@
 }
 
 /* right content designs */
+.signup-section-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .right-content {
   color: #000;
   text-align: left;
@@ -94,4 +98,50 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1040px) {
+  .signup-section-container {
+    padding: 50px 0;
+  }
+  .signup-section-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .right-content {
+    text-align: center;
+  }
+  .signup-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup-section-container {
+    padding: 50px 0;
+  }
+  .signup-section-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .right-content h1 {
+    font-size: 32px;
+  }
+  .right-content p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup-section-container {
+    padding: 50px 0;
+  }
+  .signup-section-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .right-content h1 {
+    font-size: 20px;
+  }
+  .right-content p {
+    font-size: 18px;
+  }
 }
