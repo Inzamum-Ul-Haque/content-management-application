@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
+import ScrollLink from "../ScrollLink/ScrollLink";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -30,56 +30,16 @@ const Navbar = ({ toggle }) => {
         </div>
         <ul className="nav-menu">
           <div className="nav-item">
-            <LinkS
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              className="nav-links"
-              to="discover"
-            >
-              Discover
-            </LinkS>
+            <ScrollLink name="Discover" to="discover" />
           </div>
           <div className="nav-item">
-            <LinkS
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              className="nav-links"
-              to="latest"
-            >
-              Latest
-            </LinkS>
+            <ScrollLink name="Latest" to="latest" />
           </div>
           <div className="nav-item">
-            <LinkS
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              className="nav-links"
-              to="contact"
-            >
-              Contact
-            </LinkS>
+            <ScrollLink name="Contact" to="contact" />
           </div>
           <div className="nav-item">
-            <LinkS
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              className="nav-links"
-              to="sign-up"
-            >
-              Sign Up
-            </LinkS>
+            <ScrollLink name="Sign Up" to="sign-up" />
           </div>
         </ul>
         <div className="nav-btn">

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SignUpSection.css";
 import Lottie from "react-lottie";
-import { defaultOptions } from "../../../staticData/LottieOptions";
+import { LottieOptions } from "../../../staticData/LottieOptions";
 
 const SignUpSection = () => {
   return (
@@ -13,18 +13,10 @@ const SignUpSection = () => {
             <div className="card-wrapper">
               <div className="card">
                 <div className="face front">
-                  <Lottie
-                    options={defaultOptions[0]}
-                    width={450}
-                    height={450}
-                  />
+                  <Lottie options={LottieOptions[0]} width={450} height={450} />
                 </div>
                 <div className="face back">
-                  <Lottie
-                    options={defaultOptions[1]}
-                    width={450}
-                    height={450}
-                  />
+                  <Lottie options={LottieOptions[1]} width={450} height={450} />
                 </div>
               </div>
             </div>

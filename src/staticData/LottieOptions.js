@@ -1,7 +1,7 @@
 import signupLottie from "../assets/lotties/signup.json";
 import loginLottie from "../assets/lotties/login.json";
 
-export const defaultOptions = [
+export const LottieOptions = [
   {
     loop: true,
     autoplay: true,
