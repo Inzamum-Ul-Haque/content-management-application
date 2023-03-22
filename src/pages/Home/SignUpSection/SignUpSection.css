@@ -12,6 +12,11 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.card-wrapper {
+  border: 40px solid #01bf71;
+  border-radius: 20px;
+}
+
 .card {
   text-align: center;
   position: relative;

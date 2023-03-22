@@ -10,12 +10,22 @@ const SignUpSection = () => {
       <div className="signup-section-wrapper">
         <div className="signup-section-left">
           <div className="left-content">
-            <div className="card">
-              <div className="face front">
-                <Lottie options={defaultOptions[0]} width={450} height={450} />
-              </div>
-              <div className="face back">
-                <Lottie options={defaultOptions[1]} width={450} height={450} />
+            <div className="card-wrapper">
+              <div className="card">
+                <div className="face front">
+                  <Lottie
+                    options={defaultOptions[0]}
+                    width={450}
+                    height={450}
+                  />
+                </div>
+                <div className="face back">
+                  <Lottie
+                    options={defaultOptions[1]}
+                    width={450}
+                    height={450}
+                  />
+                </div>
               </div>
             </div>
           </div>
