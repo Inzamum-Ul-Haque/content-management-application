@@ -10,7 +10,7 @@ const SignIn = () => {
           somewhereinblog.com
         </Link>
         <div className="form-content">
-          <form>
+          <form className="signin-form">
             <h1>Sign In to your account</h1>
             <label className="form-label" htmlFor="for">
               Email

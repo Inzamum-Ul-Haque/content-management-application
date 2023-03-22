@@ -1,0 +1,135 @@
+.contact-container {
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../assets/images/background-1.jpg");
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.contact-container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 1;
+  border-radius: 5px;
+  /* z-index: -100; */
+}
+
+.contact-wrapper {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  align-items: center;
+  z-index: 100;
+}
+
+.contact-left-content {
+  background: #01bf71;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.send-message-form {
+  background: #01bf71;
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.send-message-form label {
+  color: #fff;
+}
+
+.send-message-form h1 {
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.send-message-form label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.send-message-form input {
+  padding: 16px 16px;
+  margin-bottom: 32px;
+  border: none;
+  border-radius: 4px;
+}
+
+.send-message-form textarea {
+  height: 150px;
+  padding: 16px 16px;
+  margin-bottom: 32px;
+  border: none;
+  border-radius: 4px;
+}
+
+.send-message-form button {
+  background: #010101;
+  padding: 16px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/* right content */
+.contact-right-content {
+  color: #fff;
+}
+
+.address-card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 40px;
+  /* background: #01bf71;
+  border-radius: 10px; */
+  padding: 20px 10px;
+}
+
+.address-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #01bf71;
+  background: #fff;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1040px) {
+  .contact-container {
+    padding: 50px 0;
+  }
+  .contact-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
