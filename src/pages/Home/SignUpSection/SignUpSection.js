@@ -16,7 +16,7 @@ const SignUpSection = () => {
               for knowledge and share yours free of cost
             </p>
             <div className="signup-btn">
-              <Link className="signup-btn-link" to="/">
+              <Link className="signup-btn-link" to="/sign-up">
                 Sign Up
               </Link>
             </div>

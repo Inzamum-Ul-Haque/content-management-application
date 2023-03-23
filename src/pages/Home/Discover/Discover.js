@@ -1,7 +1,7 @@
 import React from "react";
 import "./Discover.css";
 import DiscoverImage from "../../../assets/images/discover-img.svg";
-import { Link as LinkS } from "react-scroll";
+import ScrollLink from "../../../components/ScrollLink/ScrollLink";
 
 const Discover = () => {
   return (
@@ -14,17 +14,7 @@ const Discover = () => {
             knowledge and share yours free of cost
           </p>
           <div className="discover-btn">
-            <LinkS
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              className="discover-btn-link"
-              to="home"
-            >
-              Get Started
-            </LinkS>
+            <ScrollLink name="Get Started" to="home" />
           </div>
         </div>
         <div className="discover-img">

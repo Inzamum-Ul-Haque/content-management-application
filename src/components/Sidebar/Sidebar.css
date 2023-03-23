@@ -42,7 +42,7 @@
   text-align: center;
 }
 
-.sidebar-link {
+.sidebar-menu a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.sidebar-link:hover {
+.sidebar-menu a:hover {
   color: #01bf71;
   transition: 0.2s ease-in-out;
 }

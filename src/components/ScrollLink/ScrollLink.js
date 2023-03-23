@@ -2,7 +2,7 @@ import React from "react";
 import "./ScrollLink.css";
 import { Link as LinkS } from "react-scroll";
 
-const ScrollLink = ({ name, to }) => {
+const ScrollLink = ({ name, to, toggleFunc }) => {
   return (
     <LinkS
       smooth={true}
@@ -10,8 +10,8 @@ const ScrollLink = ({ name, to }) => {
       spy={true}
       exact="true"
       offset={-80}
-      className="nav-links"
       to={to}
+      onClick={toggleFunc}
     >
       {name}
     </LinkS>

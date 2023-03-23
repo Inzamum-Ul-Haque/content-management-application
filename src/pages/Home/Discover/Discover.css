@@ -48,7 +48,7 @@
   margin-top: 24px;
 }
 
-.discover-btn-link {
+.discover-btn a {
   background: #01bf71;
   border-radius: 50px;
   color: #010606;
@@ -63,7 +63,7 @@
   white-space: nowrap;
 }
 
-.discover-btn-link:hover {
+.discover-btn a:hover {
   background: #fff;
   color: #010606;
 }
