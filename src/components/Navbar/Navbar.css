@@ -15,6 +15,10 @@
   background: #010606;
 }
 
+.user-nav-bg {
+  background: #010606;
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-.sign-in-container {
+.signup-container {
   min-height: 880px;
   position: fixed;
   top: 0;
@@ -14,14 +14,14 @@
   );
 }
 
-.signin-form-wrap {
+.signup-form-wrap {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.sign-in-logo {
+.sign-up-logo {
   margin-left: 32px;
   margin-top: 32px;
   color: #fff;
@@ -34,14 +34,14 @@
   text-transform: uppercase;
 }
 
-.signin-form-content {
+.signup-form-content {
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.signin-form {
+.signup-form {
   background: #010101;
   max-width: 400px;
   height: auto;
@@ -49,12 +49,12 @@
   z-index: 1;
   display: grid;
   margin: 0 auto;
-  padding: 80px 32px;
+  padding: 50px 32px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
-.signin-form h1 {
+.signup-form h1 {
   margin-bottom: 40px;
   color: #fff;
   font-size: 20px;
@@ -62,13 +62,13 @@
   text-align: center;
 }
 
-.signin-form .form-label {
+.signup-form .form-label {
   margin-bottom: 8px;
   font-size: 14px;
   color: #fff;
 }
 
-.signin-form .form-input {
+.signup-form .form-input {
   padding: 16px 16px;
   margin-bottom: 32px;
   border: none;
@@ -76,23 +76,7 @@
   outline: none;
 }
 
-.signin-form .form-input[type="password"] {
-  margin-bottom: 3px;
-}
-
-.signin-form .forgot-pass-text {
-  text-align: left;
-  color: #fff;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.signin-form .forgot-pass-text:hover {
-  text-decoration: underline;
-}
-
-.signin-form button {
-  margin-top: 24px;
+.signup-form button {
   background: #01bf71;
   padding: 16px 0;
   border: none;
@@ -102,35 +86,35 @@
   cursor: pointer;
 }
 
-.continue-to-sign-up-text {
+.continue-to-sign-in-text {
   color: #fff;
   text-align: center;
   margin-top: 24px;
 }
 
-.continue-to-sign-up-text a {
+.continue-to-sign-in-text a {
   color: #01bf71;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
 }
 
-.continue-to-sign-up-text a:hover {
+.continue-to-sign-in-text a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 480px) {
-  .signin-form-wrap {
+  .signup-form-wrap {
     height: 80%;
   }
-  .sign-in-logo {
+  .sign-up-logo {
     margin-left: 16px;
     margin-top: 8px;
   }
-  .signin-form-content {
+  .signup-form-content {
     padding: 10px;
   }
-  .signin-form {
+  .signup-form {
     padding: 32px 32px;
   }
 }
