@@ -1,0 +1,6 @@
+.dashboard-container {
+  min-height: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

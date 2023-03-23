@@ -31,7 +31,9 @@ const SignIn = () => {
               placeholder="Password"
             />
             <span className="forgot-pass-text">Forgot Password?</span>
-            <button>Continue</button>
+            <Link className="signin-btn" to="/dashboard">
+              Continue
+            </Link>
             <span className="continue-to-sign-up-text">
               Don't have an account? <Link to="/sign-up">Sign Up</Link> Now
             </span>

@@ -91,7 +91,9 @@
   text-decoration: underline;
 }
 
-.signin-form button {
+.signin-form .signin-btn {
+  text-align: center;
+  text-decoration: none;
   margin-top: 24px;
   background: #01bf71;
   padding: 16px 0;
