@@ -9,3 +9,7 @@
   max-width: 1400px;
   margin: 0 auto;
 }
+
+.searchbar-container {
+  width: 1000px;
+}
