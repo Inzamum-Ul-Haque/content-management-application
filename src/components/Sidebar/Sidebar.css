@@ -51,6 +51,7 @@
   list-style: none;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  color: #fff;
 }
 
 .sidebar-menu a:hover {
