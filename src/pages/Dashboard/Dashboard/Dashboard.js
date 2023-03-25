@@ -1,4 +1,5 @@
 import React from "react";
+import AddPost from "../../../components/AddPost/AddPost";
 import Searchbar from "../../../components/Searchbar/Searchbar";
 import "./Dashboard.css";
 
@@ -6,9 +7,8 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-wrapper">
-        <div className="searchbar-container">
-          <Searchbar />
-        </div>
+        <Searchbar />
+        <AddPost />
       </div>
     </div>
   );
