@@ -1,6 +1,6 @@
 .searchbar-wrapper {
-  margin-bottom: 40px;
-  width: 1200px;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .search-box-item {
@@ -52,27 +52,13 @@
   outline: none;
 }
 
-@media screen and (max-width: 1040px) {
-  .searchbar-wrapper {
-    width: 800px;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .searchbar-wrapper {
-    width: 550px;
-  }
-
   .search-box-item {
     grid-template-columns: 25% 75%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .searchbar-wrapper {
-    width: 400px;
-  }
-
   .search-box-item {
     grid-template-columns: 30% 70%;
   }
