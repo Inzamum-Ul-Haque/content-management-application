@@ -30,9 +30,36 @@
   font-size: 2.2rem;
 }
 
-.postcard-right-content .post-title:hover {
+.post-title:hover {
   color: #01bf71;
   cursor: pointer;
+}
+
+.title-container,
+.edit-delete-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-delete-btn svg {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.edit-delete-btn svg:first-child:hover {
+  color: #01bf71;
+}
+
+.edit-delete-btn svg:last-child:hover {
+  color: #f80303;
 }
 
 .author-date {
@@ -54,6 +81,24 @@
 }
 
 .postcard-right-content .post-desc {
-  height: 68px;
-  /* text-overflow: ellipsis; */
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.see-more-link {
+  margin-top: 15px;
+  display: block;
+  text-align: right;
+}
+
+@media screen and (max-width: 1040px) {
+  .postcard-wrapper {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
 }

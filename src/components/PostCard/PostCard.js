@@ -1,9 +1,10 @@
 import React from "react";
 import "./PostCard.css";
 import img from "../../assets/images/unsplash-1.jpg";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 const PostCard = () => {
-  const text =
+  let text =
     "শাল, পিয়াল, মহুয়ায় ঘেরা অযোধ্যা পাহাড়। অপূর্ব তার সৌন্দর্য্য।পশ্চিমবঙ্গের পুরুলিয়া জেলায় এর অবস্থান। চারিদিকে পাহাড় ঘেরা একটি ছোট্ট মালভূমি। শাল, পিয়াল, মহুয়ায় ঘেরা অযোধ্যা পাহাড়। অপূর্ব তার সৌন্দর্য্য। পশ্চিমবঙ্গের পুরুলিয়া জেলায় এর অবস্থান। চারিদিকে পাহাড় ঘেরা একটি ছোট্ট মালভূমি। শাল, পিয়াল, মহুয়ায় ঘেরা অযোধ্যা পাহাড়। অপূর্ব তার সৌন্দর্য্য। পশ্চিমবঙ্গের পুরুলিয়া জেলায় এর অবস্থান। চারিদিকে পাহাড় ঘেরা একটি ছোট্ট মালভূমি। শাল, পিয়াল, মহুয়ায় ঘেরা অযোধ্যা পাহাড়। অপূর্ব তার সৌন্দর্য্য। পশ্চিমবঙ্গের পুরুলিয়া জেলায় এর অবস্থান। চারিদিকে পাহাড় ঘেরা একটি ছোট্ট মালভূমি";
 
   return (
@@ -15,9 +16,15 @@ const PostCard = () => {
           </div>
         </div>
         <div className="postcard-right-content">
-          <h1 className="post-title">
-            ডিগ্রি নিলেই নমশূদ্র কখনো ব্রাহ্মণ হয় না।
-          </h1>
+          <div className="title-container">
+            <h1 className="post-title">
+              ডিগ্রি নিলেই নমশূদ্র কখনো ব্রাহ্মণ হয় না।
+            </h1>
+            <div className="edit-delete-btn">
+              <AiFillEdit />
+              <AiFillDelete />
+            </div>
+          </div>
           <div className="author-date">
             <div>
               <span className="posted">Posted by</span>{" "}
@@ -29,7 +36,7 @@ const PostCard = () => {
               <span className="views">25</span>{" "}
             </div>
           </div>
-          <p className="post-desc">{text.slice(0, 450) + " ...See More"}</p>
+          <p className="post-desc">{text}</p>
         </div>
       </div>
     </div>
