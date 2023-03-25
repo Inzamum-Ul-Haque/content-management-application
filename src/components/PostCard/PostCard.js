@@ -21,8 +21,8 @@ const PostCard = () => {
               ডিগ্রি নিলেই নমশূদ্র কখনো ব্রাহ্মণ হয় না।
             </h1>
             <div className="edit-delete-btn">
-              <AiFillEdit />
-              <AiFillDelete />
+              <AiFillEdit title="Edit" />
+              <AiFillDelete title="Delete" />
             </div>
           </div>
           <div className="author-date">

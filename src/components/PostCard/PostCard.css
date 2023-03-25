@@ -28,6 +28,7 @@
 
 .postcard-right-content .post-title {
   font-size: 2.2rem;
+  margin-bottom: 0;
 }
 
 .post-title:hover {
@@ -78,6 +79,7 @@
 .date,
 .views {
   font-weight: 500;
+  color: #4d91d5;
 }
 
 .postcard-right-content .post-desc {
@@ -88,6 +90,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 .see-more-link {

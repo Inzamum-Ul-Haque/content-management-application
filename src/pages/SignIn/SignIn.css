@@ -34,6 +34,10 @@
   text-transform: uppercase;
 }
 
+.sign-in-logo:hover {
+  color: #fff;
+}
+
 .signin-form-content {
   height: 100%;
   display: flex;
@@ -119,6 +123,7 @@
 
 .continue-to-sign-up-text a:hover {
   text-decoration: underline;
+  color: #01bf71;
 }
 
 @media screen and (max-width: 480px) {

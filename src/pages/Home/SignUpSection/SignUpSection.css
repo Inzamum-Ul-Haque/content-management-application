@@ -17,7 +17,7 @@
   border-radius: 20px;
 }
 
-.card {
+.card-content {
   text-align: center;
   position: relative;
   width: 450px;
@@ -26,7 +26,7 @@
   margin: 0 auto;
 }
 
-.card .face {
+.card-content .face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -40,24 +40,24 @@
   transition: 2s ease-in-out;
 }
 
-.card .face div {
+.card-content .face div {
   transform: perspective(500px) translateZ(50px);
 }
 
-.card .face.front {
+.card-content .face.front {
   background: #fff;
 }
 
-.card:hover .face.front {
+.card-content:hover .face.front {
   transform: perspective(500px) rotateY(180deg);
 }
 
-.card .face.back {
+.card-content .face.back {
   background: #fff;
   transform: perspective(500px) rotateY(180deg);
 }
 
-.card:hover .face.back {
+.card-content:hover .face.back {
   transform: perspective(500px) rotateY(360deg);
 }
 
@@ -103,6 +103,10 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+}
+
+.signup-btn-link:hover {
+  color: #010606;
 }
 
 @media screen and (max-width: 1040px) {

@@ -25,7 +25,7 @@ const SignUpSection = () => {
         <div className="signup-section-left">
           <div className="left-content">
             <div className="card-wrapper">
-              <div className="card">
+              <div className="card-content">
                 <div className="face front">
                   <Lottie options={LottieOptions[0]} width={450} height={450} />
                 </div>

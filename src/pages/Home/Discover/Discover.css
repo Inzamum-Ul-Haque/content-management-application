@@ -51,7 +51,7 @@
 .discover-btn a {
   background: #01bf71;
   border-radius: 50px;
-  color: #010606;
+  color: #010606 !important;
   padding: 10px 22px;
   border: none;
   outline: none;

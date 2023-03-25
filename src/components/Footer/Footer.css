@@ -75,6 +75,10 @@
   font-weight: 500;
 }
 
+.social-logo:hover {
+  color: #fff;
+}
+
 .website-rights {
   color: #fff;
   margin-bottom: 16px;
