@@ -1,6 +1,7 @@
 import React from "react";
 import LatestLinks from "../../components/LatestLinks/LatestLinks";
 import MostViewed from "../../components/MostViewed/MostViewed";
+import OnlineUsers from "../../components/OnlineUsers/OnlineUsers";
 import PostCard from "../../components/PostCard/PostCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import "./Posts.css";
@@ -20,7 +21,7 @@ const Posts = () => {
         <div className="posts-right-content">
           <LatestLinks />
           <MostViewed />
-          <div className="online-users"></div>
+          <OnlineUsers />
         </div>
       </div>
     </div>

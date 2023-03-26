@@ -1,0 +1,33 @@
+.online-users-container {
+  padding: 20px;
+  border: 2px solid #aeaeae;
+  border-radius: 15px;
+}
+
+.online-users-wrapper > h2 {
+  font-size: 1.3rem;
+  color: #281e5d;
+  margin-bottom: 15px;
+}
+
+.online-users-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.online-users-name:last-child {
+  margin-bottom: 0;
+}
+
+.green-circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #01bf71;
+}
+
+.user-name {
+  margin: 0;
+}
