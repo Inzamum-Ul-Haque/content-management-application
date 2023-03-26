@@ -1,0 +1,26 @@
+.most-viewed-container {
+  padding: 20px;
+  border: 2px solid #aeaeae;
+  border-radius: 15px;
+}
+
+.most-viewed-wrapper > h2 {
+  font-size: 1.3rem;
+  color: #281e5d;
+  margin-bottom: 15px;
+}
+
+.most-viewed-wrapper ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.most-viewed-wrapper ul .most-viewed-postcard-container {
+  margin-bottom: 20px;
+}
+
+.most-viewed-wrapper ul .most-viewed-postcard-container:last-child {
+  margin-bottom: 0;
+}

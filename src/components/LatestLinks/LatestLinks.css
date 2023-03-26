@@ -2,11 +2,13 @@
   padding: 20px;
   border: 2px solid #aeaeae;
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .latest-links-wrapper h2 {
   font-size: 1.3rem;
   color: #281e5d;
+  margin-bottom: 15px;
 }
 
 .latest-links-wrapper ul {
