@@ -28,7 +28,7 @@ const Navbar = ({ toggle }) => {
           <Link to="/dashboard">Dashboard</Link>
         </div>
         <div className="nav-item">
-          <Link>Explore Posts</Link>
+          <Link to="/posts">Explore Posts</Link>
         </div>
         <div className="nav-item">
           <Link>Profile</Link>

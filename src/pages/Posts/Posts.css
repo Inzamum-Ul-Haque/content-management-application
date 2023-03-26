@@ -1,0 +1,16 @@
+.posts-container {
+  background: #ebeef4;
+  min-height: 880px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.posts-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 15px;
+}
