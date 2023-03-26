@@ -27,4 +27,9 @@
 .latest-links-wrapper ul a:hover {
   color: #0a1172;
   text-decoration: underline;
+  transition: 0.3s ease-in;
+}
+
+.link-icon:hover {
+  transition: 0.3s ease-in;
 }

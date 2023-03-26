@@ -1,0 +1,70 @@
+.home-post-card-container {
+  width: 100%;
+  padding: 30px 0;
+  border: 1px solid #e7e7e8;
+  border-top: 0;
+}
+
+.post-title {
+  padding: 0 15px;
+}
+
+.post-writer {
+  padding: 0 15px;
+}
+
+.post-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.post-img img {
+  width: 50%;
+  margin: 0 auto !important;
+}
+
+.post-desc {
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.post-desc p {
+  text-align: justify;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.post-desc a {
+  color: #281e5d;
+  text-decoration: none;
+}
+
+.post-views-comments {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.post-views {
+  padding: 0 15px;
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.post-comments {
+  padding: 0 15px;
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
