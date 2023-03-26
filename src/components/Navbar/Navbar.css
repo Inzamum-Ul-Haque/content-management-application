@@ -22,6 +22,7 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -119,7 +120,7 @@
   .mobile-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: -15px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
