@@ -5,7 +5,7 @@
   border-top: 0;
 }
 
-.post-title {
+.home-post-card-wrapper .post-title {
   padding: 0 15px;
 }
 
@@ -25,7 +25,7 @@
   margin: 0 auto !important;
 }
 
-.post-desc {
+.home-post-card-wrapper .post-desc {
   padding: 0 15px;
   margin-bottom: 10px;
 }
