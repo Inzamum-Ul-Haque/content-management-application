@@ -5,6 +5,21 @@
   flex-direction: column;
   align-items: center;
   padding: 120px 0;
+  position: relative;
+}
+
+.right-content-side-icon {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.right-content-side-icon:hover {
+  transform: translateX(-10px);
+  transition: 0.4s ease-in-out;
 }
 
 .posts-wrapper {
@@ -22,6 +37,14 @@
   width: 100%;
 }
 
+.link-on-display {
+  display: block;
+}
+
+.link-off-display {
+  display: none;
+}
+
 @media screen and (max-width: 1300px) {
   .posts-wrapper {
     gap: 0;
@@ -29,6 +52,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .right-content-side-icon {
+    display: block;
+  }
+
   .posts-wrapper {
     padding: 0 20px;
     grid-template-columns: 100%;
