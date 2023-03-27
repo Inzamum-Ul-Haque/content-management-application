@@ -1,7 +1,9 @@
 .online-users-container {
   padding: 20px;
-  border: 2px solid #aeaeae;
-  border-radius: 15px;
+  border: 2px solid #e7e7e8;
+  margin-bottom: 20px;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 .online-users-wrapper > h2 {
@@ -30,4 +32,10 @@
 
 .user-name {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .online-users-container {
+    display: none;
+  }
 }

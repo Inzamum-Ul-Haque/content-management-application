@@ -1,8 +1,9 @@
 .latest-links-container {
   padding: 20px;
-  border: 2px solid #aeaeae;
-  border-radius: 15px;
+  border: 2px solid #e7e7e8;
   margin-bottom: 20px;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 .latest-links-wrapper h2 {
@@ -32,4 +33,10 @@
 
 .link-icon:hover {
   transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .latest-links-container {
+    display: none;
+  }
 }

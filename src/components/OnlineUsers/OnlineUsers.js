@@ -6,6 +6,7 @@ const OnlineUsers = () => {
     <div className="online-users-container">
       <div className="online-users-wrapper">
         <h2>Users Online</h2>
+        <hr />
         <div className="all-online-users">
           <div className="online-users-name">
             <div className="green-circle"></div>

@@ -21,3 +21,16 @@
   gap: 20px;
   width: 100%;
 }
+
+@media screen and (max-width: 1300px) {
+  .posts-wrapper {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .posts-wrapper {
+    padding: 0 20px;
+    grid-template-columns: 100%;
+  }
+}

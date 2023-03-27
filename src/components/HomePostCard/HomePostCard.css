@@ -47,21 +47,15 @@
   text-decoration: none;
 }
 
-.post-views-comments {
+.post-counts {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.post-views {
-  padding: 0 15px;
-  display: flex;
-  gap: 5px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.post-comments {
+.post-views,
+.post-comments,
+.post-likes {
   padding: 0 15px;
   display: flex;
   gap: 5px;

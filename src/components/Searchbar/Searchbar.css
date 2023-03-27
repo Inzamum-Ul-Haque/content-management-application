@@ -71,6 +71,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1080px) {
+  .search-box-item {
+    grid-template-columns: 20% 60% 20%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .search-box-item {
     grid-template-columns: 20% 60% 20%;

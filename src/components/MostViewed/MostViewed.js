@@ -7,6 +7,7 @@ const MostViewed = () => {
     <div className="most-viewed-container">
       <div className="most-viewed-wrapper">
         <h2>Most Viewed</h2>
+        <hr />
         <ul>
           <MostViewedPostcard />
           <MostViewedPostcard />

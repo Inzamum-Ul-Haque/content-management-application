@@ -13,6 +13,7 @@ const LatestLinks = () => {
     <div className="latest-links-container">
       <div className="latest-links-wrapper">
         <h2>Latest Links</h2>
+        <hr />
         <ul>
           <Link onMouseEnter={linkHover} onMouseLeave={linkHover}>
             {hover && <MdKeyboardArrowRight className="link-icon" />} ডিগ্রি

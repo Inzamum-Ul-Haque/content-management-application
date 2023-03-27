@@ -4,6 +4,7 @@ import img from "../../assets/images/background-1.jpg";
 import { BsEye } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FaComments } from "react-icons/fa";
+import { AiFillLike } from "react-icons/ai";
 
 const HomePostCard = () => {
   return (
@@ -41,7 +42,7 @@ const HomePostCard = () => {
           </p>
           <Link to="/dashboard">See More</Link>
         </div>
-        <div className="post-views-comments">
+        <div className="post-counts">
           <div className="post-views">
             <span className="post-view-icon">
               <BsEye />
@@ -53,6 +54,12 @@ const HomePostCard = () => {
               <FaComments />
             </span>
             <span className="post-comments-count">15</span>
+          </div>
+          <div className="post-likes">
+            <span className="post-likes-icon">
+              <AiFillLike />
+            </span>
+            <span className="post-likes-count">56</span>
           </div>
         </div>
       </div>
