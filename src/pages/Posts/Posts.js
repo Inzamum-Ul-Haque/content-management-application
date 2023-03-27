@@ -14,7 +14,6 @@ const Posts = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log(show);
   return (
     <>
       <div className="posts-container">

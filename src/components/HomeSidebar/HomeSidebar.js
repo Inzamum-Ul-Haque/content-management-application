@@ -1,8 +1,8 @@
 import React from "react";
 import { Offcanvas } from "react-bootstrap";
-import LatestLinks from "../LatestLinks/LatestLinks";
-import MostViewed from "../MostViewed/MostViewed";
-import OnlineUsers from "../OnlineUsers/OnlineUsers";
+import SideLatestLinks from "../SideLatestLinks/SideLatestLinks";
+import SideMostViewed from "../SideMostViewed/SideMostViewed";
+import SideOnlineUsers from "../SideOnlineUsers/SideOnlineUsers";
 import "./HomeSidebar.css";
 
 const HomeSidebar = ({ show, handleClose }) => {
@@ -14,11 +14,10 @@ const HomeSidebar = ({ show, handleClose }) => {
       placement="end"
       name="end"
     >
-      <Offcanvas.Header closeButton></Offcanvas.Header>
       <Offcanvas.Body>
-        <LatestLinks />
-        <MostViewed />
-        <OnlineUsers />
+        <SideLatestLinks />
+        <SideMostViewed />
+        <SideOnlineUsers />
       </Offcanvas.Body>
     </Offcanvas>
   );

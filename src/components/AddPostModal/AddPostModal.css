@@ -16,3 +16,21 @@
   transform: translate(-50%, -50%);
   background: #fff;
 }
+
+.modal-footer .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.modal-footer .btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-footer .btn span svg {
+  color: #fff;
+  font-size: 20px;
+}
