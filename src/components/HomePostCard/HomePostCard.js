@@ -43,23 +43,28 @@ const HomePostCard = () => {
           <Link to="/dashboard">See More</Link>
         </div>
         <div className="post-counts">
-          <div className="post-views">
-            <span className="post-view-icon">
-              <BsEye />
-            </span>
-            <span className="post-views-count">26</span>
+          <div className="post-update-time">
+            <p>Last Updated: 12m ago</p>
           </div>
-          <div className="post-comments">
-            <span className="post-comments-icon">
-              <FaComments />
-            </span>
-            <span className="post-comments-count">15</span>
-          </div>
-          <div className="post-likes">
-            <span className="post-likes-icon">
-              <AiFillLike />
-            </span>
-            <span className="post-likes-count">56</span>
+          <div className="post-views-comments-likes-count">
+            <div className="post-views">
+              <span className="post-view-icon">
+                <BsEye />
+              </span>
+              <span className="post-views-count">26</span>
+            </div>
+            <div className="post-comments">
+              <span className="post-comments-icon">
+                <FaComments />
+              </span>
+              <span className="post-comments-count">15</span>
+            </div>
+            <div className="post-likes">
+              <span className="post-likes-icon">
+                <AiFillLike />
+              </span>
+              <span className="post-likes-count">56</span>
+            </div>
           </div>
         </div>
       </div>

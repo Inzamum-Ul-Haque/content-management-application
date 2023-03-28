@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import "./AddPostModal.css";
 import { VscDiscard } from "react-icons/vsc";
@@ -6,9 +6,33 @@ import { AiOutlineFileAdd } from "react-icons/ai";
 import { IoMdPhotos } from "react-icons/io";
 
 const AddPostModal = ({ show, handleClose }) => {
+  const [image, setImage] = useState(null);
+  const [previews, setPreviews] = useState(null);
   const addImageAction = (e) => {
-    console.log(e.target.value);
+    if (e.target.files && e.target.files.length > 0) {
+      setImage(e.target.files);
+    }
   };
+
+  useEffect(() => {
+    if (!image) {
+      return;
+    }
+
+    let temp = [];
+    for (let i = 0; i < image.length; i++) {
+      temp.push(URL.createObjectURL(image[i]));
+    }
+    let objectUrl = temp;
+    setPreviews(objectUrl);
+
+    //free memory
+    for (let i = 0; i < objectUrl.length; i++) {
+      return () => {
+        URL.revokeObjectURL(objectUrl[i]);
+      };
+    }
+  }, [image]);
 
   return (
     <>
@@ -28,11 +52,23 @@ const AddPostModal = ({ show, handleClose }) => {
                 contentEditable="true"
                 data-placeholder="What's on your mind..."
                 className="content-desc-input"
-              ></div>
+              >
+                {previews &&
+                  previews.map((pic) => {
+                    return (
+                      <img className="content-desc-images" src={pic} alt="" />
+                    );
+                  })}
+              </div>
             </div>
             <div className="add-image-btn">
               <label htmlFor="image-upload">
-                <input type="file" id="image-upload" onClick={addImageAction} />
+                <input
+                  type="file"
+                  accept="image/jpg, image/jpeg, image/png"
+                  id="image-upload"
+                  onChange={addImageAction}
+                />
                 <span>Add Image</span>
                 <span>
                   <IoMdPhotos />

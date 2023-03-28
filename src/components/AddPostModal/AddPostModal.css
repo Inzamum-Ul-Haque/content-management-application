@@ -54,6 +54,10 @@
   color: gray;
 }
 
+.content-desc-images {
+  width: 100%;
+}
+
 .add-image-btn {
   display: flex;
   justify-content: flex-end;
