@@ -1,7 +1,7 @@
 import React from "react";
 import "./Latest.css";
 import LatestImageSection from "../../../components/LatestImageSection/LatestImageSection";
-import { latestBlogs } from "../../../staticData/LatestBlogs";
+import { latestBlogs } from "../../../staticData/latestBlogs";
 
 const Latest = () => {
   return (

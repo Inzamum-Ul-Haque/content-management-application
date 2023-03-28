@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SignUpSection.css";
 import Lottie from "react-lottie";
-import { LottieOptions } from "../../../staticData/LottieOptions";
+import { LottieOptions } from "../../../staticData/lottieOptions";
 
 const SignUpSection = () => {
   return (
