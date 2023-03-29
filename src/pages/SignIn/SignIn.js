@@ -1,30 +1,30 @@
 import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { errorMessage } from "../../staticData/authErrors";
 import "./SignIn.css";
 
 const SignIn = () => {
-  const [error, setError] = useState("");
+  const [signInError, setSignInError] = useState("");
   const { signInUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const from = location.state?.from?.pathname || "/dashboard";
 
   // email password sign in
-  const handleSignIn = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
-
-    signInUser(email, password)
+  const handleSignIn = (data) => {
+    signInUser(data.email, data.password)
       .then((result) => {
-        form.reset();
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        setError(errorMessage(error.message));
+        setSignInError(errorMessage(error.message));
       });
   };
 
@@ -35,30 +35,42 @@ const SignIn = () => {
           somewhereinblog.com
         </Link>
         <div className="signin-form-content">
-          <form onSubmit={handleSignIn} className="signin-form">
+          <form onSubmit={handleSubmit(handleSignIn)} className="signin-form">
             <h1>Sign In to your account</h1>
-            <label className="form-label" htmlFor="for">
-              Email
-            </label>
-            <input
-              className="form-input"
-              name="email"
-              type="email"
-              required
-              placeholder="E-mail"
-            />
-            <label className="form-label" htmlFor="for">
-              Password
-            </label>
-            <input
-              className="form-input"
-              name="password"
-              type="password"
-              required
-              placeholder="Password"
-            />
-            {error && <span className="error-text">{error}</span>}
-            <span className="forgot-pass-text">Forgot Password?</span>
+            <div className="input-container">
+              <label className="form-label" htmlFor="for">
+                Email
+              </label>
+              <input
+                className="form-input"
+                {...register("email", {
+                  required: "Please enter your e-mail",
+                })}
+                type="email"
+                placeholder="E-mail"
+              />
+              {errors.email && (
+                <span className="error-text">{errors.email.message}</span>
+              )}
+            </div>
+            <div className="input-container">
+              <label className="form-label" htmlFor="for">
+                Password
+              </label>
+              <input
+                className="form-input"
+                {...register("password", {
+                  required: "Please enter your password",
+                })}
+                type="password"
+                placeholder="Password"
+              />
+              {errors.password && (
+                <span className="error-text">{errors.password.message}</span>
+              )}
+              {signInError && <span className="error-text">{signInError}</span>}
+              <span className="forgot-pass-text">Forgot Password?</span>
+            </div>
             <button type="submit" className="signin-btn">
               Continue
             </button>

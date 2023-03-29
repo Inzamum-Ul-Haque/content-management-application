@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 import ScrollLink from "../ScrollLink/ScrollLink";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  const [user, setUser] = useState(true);
+  const { user } = useContext(AuthContext);
   let navLinks;
 
   const changeNavBg = () => {

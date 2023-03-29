@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthProvider";
 import ScrollLink from "../ScrollLink/ScrollLink";
 import "./Sidebar.css";
 
 const Sidebar = ({ isOpen, toggle }) => {
-  const [user, setUser] = useState(true);
+  const { user } = useContext(AuthContext);
   let sideLinks;
 
   if (user) {

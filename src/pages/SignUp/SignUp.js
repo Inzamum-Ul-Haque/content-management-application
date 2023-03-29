@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { errorMessage } from "../../staticData/authErrors";
 import "./SignUp.css";
@@ -9,12 +9,14 @@ const SignUp = () => {
   const [passwordMatchError, setPasswordMatchError] = useState("");
   const [signupError, setSignupError] = useState("");
   const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // email password sign up
   const handleSignUp = (data) => {
     setPasswordMatchError("");
     setSignupError("");
@@ -25,7 +27,9 @@ const SignUp = () => {
     }
 
     signInUser(data.email, data.password)
-      .then((result) => {})
+      .then((result) => {
+        navigate("/dashboard");
+      })
       .catch((error) => {
         setSignupError(errorMessage(error.message));
       });
