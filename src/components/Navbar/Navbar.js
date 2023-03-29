@@ -4,6 +4,8 @@ import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 import ScrollLink from "../ScrollLink/ScrollLink";
 import { AuthContext } from "../../contexts/AuthProvider";
+import userImage from "../../assets/images/user.png";
+import { NavDropdown } from "react-bootstrap";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -17,6 +19,7 @@ const Navbar = ({ toggle }) => {
       setScrollNav(false);
     }
   };
+  console.log(user);
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavBg);
@@ -70,9 +73,32 @@ const Navbar = ({ toggle }) => {
         </div>
         <ul className="nav-menu">{navLinks}</ul>
         <div className="nav-btn">
-          <Link className="nav-btn-link" to="/sign-in">
-            Sign In
-          </Link>
+          {user ? (
+            <div className="user-image">
+              <NavDropdown
+                id="nav-dropdown-dark-example"
+                title={
+                  <img
+                    className="user-image-placeholder"
+                    src={user.photoURL ? user.photoURL : userImage}
+                    alt=""
+                  />
+                }
+                menuVariant="dark"
+              >
+                <NavDropdown.Item href="">{user.email}</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="">Profile</NavDropdown.Item>
+                <NavDropdown.Item href="">Settings</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="">Log Out</NavDropdown.Item>
+              </NavDropdown>
+            </div>
+          ) : (
+            <Link className="nav-btn-link" to="/sign-in">
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </div>

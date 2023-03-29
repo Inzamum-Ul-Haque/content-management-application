@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Spinner from "../../components/Spinner/Spinner";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { errorMessage } from "../../staticData/authErrors";
 import "./SignIn.css";
 
 const SignIn = () => {
   const [signInError, setSignInError] = useState("");
+  const [loadingBtn, setLoadingBtn] = useState(false);
   const { signInUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -19,11 +21,15 @@ const SignIn = () => {
 
   // email password sign in
   const handleSignIn = (data) => {
+    setLoadingBtn(true);
+
     signInUser(data.email, data.password)
       .then((result) => {
+        setLoadingBtn(false);
         navigate(from, { replace: true });
       })
       .catch((error) => {
+        setLoadingBtn(false);
         setSignInError(errorMessage(error.message));
       });
   };
@@ -71,9 +77,15 @@ const SignIn = () => {
               {signInError && <span className="error-text">{signInError}</span>}
               <span className="forgot-pass-text">Forgot Password?</span>
             </div>
-            <button type="submit" className="signin-btn">
-              Continue
-            </button>
+            {loadingBtn ? (
+              <button className="loading-btn">
+                <Spinner width="5px" height="5px" background="#fff" />
+              </button>
+            ) : (
+              <button type="submit" className="signin-btn">
+                Continue
+              </button>
+            )}
             <span className="continue-to-sign-up-text">
               Don't have an account? <Link to="/sign-up">Sign Up</Link> Now
             </span>

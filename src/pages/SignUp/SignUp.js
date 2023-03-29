@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import Spinner from "../../components/Spinner/Spinner";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { errorMessage } from "../../staticData/authErrors";
 import "./SignUp.css";
@@ -8,7 +9,8 @@ import "./SignUp.css";
 const SignUp = () => {
   const [passwordMatchError, setPasswordMatchError] = useState("");
   const [signupError, setSignupError] = useState("");
-  const { signInUser } = useContext(AuthContext);
+  const [loadingBtn, setLoadingBtn] = useState(false);
+  const { signUpUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
     register,
@@ -18,19 +20,23 @@ const SignUp = () => {
 
   // email password sign up
   const handleSignUp = (data) => {
+    setLoadingBtn(true);
     setPasswordMatchError("");
     setSignupError("");
 
     if (data.password !== data.confirmPassword) {
+      setLoadingBtn(false);
       setPasswordMatchError("Password do not match");
       return;
     }
 
-    signInUser(data.email, data.password)
+    signUpUser(data.email, data.password)
       .then((result) => {
+        setLoadingBtn(false);
         navigate("/dashboard");
       })
       .catch((error) => {
+        setLoadingBtn(false);
         setSignupError(errorMessage(error.message));
       });
   };
@@ -113,7 +119,13 @@ const SignUp = () => {
                 <span className="error-text">{passwordMatchError}</span>
               )}
             </div>
-            <button type="submit">Sign Up</button>
+            {loadingBtn ? (
+              <button className="loading-btn">
+                <Spinner width="5px" height="5px" background="#fff" />
+              </button>
+            ) : (
+              <button type="submit">Sign Up</button>
+            )}
             {signupError && <span className="error-text">{signupError}</span>}
             <span className="continue-to-sign-in-text">
               Already have an account? <Link to="/sign-in">Sign In</Link> Now

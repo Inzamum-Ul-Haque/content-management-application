@@ -39,9 +39,13 @@ const Sidebar = ({ isOpen, toggle }) => {
       <div className="sidebar-wrapper">
         <div className="sidebar-menu">{sideLinks}</div>
         <div className="side-btn-wrap">
-          <Link to="/sign-in" className="sidebar-route">
-            Sign In
-          </Link>
+          {user ? (
+            <Link className="sidebar-route">Sign Out</Link>
+          ) : (
+            <Link to="/sign-in" className="sidebar-route">
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </div>
