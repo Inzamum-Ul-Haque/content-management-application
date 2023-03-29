@@ -70,6 +70,12 @@
   text-align: center;
 }
 
+.signup-form .input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
 .signup-form .form-label {
   margin-bottom: 8px;
   font-size: 14px;
@@ -78,18 +84,9 @@
 
 .signup-form .form-input {
   padding: 16px 16px;
-  margin-bottom: 25px;
   border: none;
   border-radius: 4px;
   outline: none;
-}
-
-.confirm-pass {
-  margin-bottom: 0 !important;
-}
-
-.signup-form .error-text {
-  margin-bottom: 25px;
 }
 
 .signup-form button {
