@@ -84,6 +84,12 @@
   margin-bottom: 3px;
 }
 
+.error-text {
+  text-align: left;
+  color: #ff0000;
+  font-size: 11px;
+}
+
 .signin-form .forgot-pass-text {
   text-align: left;
   color: #fff;
