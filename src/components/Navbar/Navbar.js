@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 import ScrollLink from "../ScrollLink/ScrollLink";
@@ -9,7 +9,8 @@ import { NavDropdown } from "react-bootstrap";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user, logOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   let navLinks;
 
   const changeNavBg = () => {
@@ -19,7 +20,16 @@ const Navbar = ({ toggle }) => {
       setScrollNav(false);
     }
   };
-  console.log(user);
+
+  const handleLogOut = () => {
+    logOutUser()
+      .then((result) => {
+        navigate("/sign-in");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavBg);
@@ -91,7 +101,9 @@ const Navbar = ({ toggle }) => {
                 <NavDropdown.Item href="">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="">Settings</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="">Log Out</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogOut} href="">
+                  Log Out
+                </NavDropdown.Item>
               </NavDropdown>
             </div>
           ) : (

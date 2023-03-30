@@ -106,7 +106,8 @@
 }
 
 .signup-btn-link:hover {
-  color: #010606;
+  background: #010606;
+  color: #fff;
 }
 
 @media screen and (max-width: 1040px) {
