@@ -90,6 +90,10 @@ const SignUp = () => {
                 className="form-input"
                 {...register("password", {
                   required: "Please provide password",
+                  minLength: {
+                    value: 8,
+                    message: "Password should be at least 8 characters!",
+                  },
                 })}
                 type="password"
                 placeholder="Enter a password"
@@ -106,6 +110,10 @@ const SignUp = () => {
                 className="form-input"
                 {...register("confirmPassword", {
                   required: "Please confirm password",
+                  minLength: {
+                    value: 8,
+                    message: "Password should be at least 8 characters!",
+                  },
                 })}
                 type="password"
                 placeholder="Type your password again"

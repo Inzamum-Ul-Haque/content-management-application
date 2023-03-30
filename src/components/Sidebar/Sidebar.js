@@ -1,13 +1,24 @@
 import React, { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import ScrollLink from "../ScrollLink/ScrollLink";
 import "./Sidebar.css";
 
 const Sidebar = ({ isOpen, toggle }) => {
-  const { user } = useContext(AuthContext);
+  const { user, logOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   let sideLinks;
+
+  const handleLogOut = () => {
+    logOutUser()
+      .then((result) => {
+        navigate("/sign-in");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   if (user) {
     sideLinks = (
@@ -40,7 +51,9 @@ const Sidebar = ({ isOpen, toggle }) => {
         <div className="sidebar-menu">{sideLinks}</div>
         <div className="side-btn-wrap">
           {user ? (
-            <Link className="sidebar-route">Sign Out</Link>
+            <Link onClick={handleLogOut} className="sidebar-route">
+              Sign Out
+            </Link>
           ) : (
             <Link to="/sign-in" className="sidebar-route">
               Sign In
